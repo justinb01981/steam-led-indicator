@@ -1,0 +1,7 @@
+#add steam-ids here, player must have made their profile public so you can query their status
+#justin
+76561197970679371
+#bryan
+76561198009899967
+#nick
+76561197970715856
