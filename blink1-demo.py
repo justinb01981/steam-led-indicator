@@ -25,23 +25,23 @@ while 1:
                 body = ''
             print body
             ###offline
-	    if body.find('personastate": 0') >= 0:
+	    if body.find('personastate":0') >= 0:
                 color['red'] = 0xff
 		color['blue'] = color['green'] = 0
             ###online
-            elif body.find('personastate": 1') >= 0 and body.find('gameextrainfo":') < 0:
+            elif body.find('personastate":1') >= 0 and body.find('gameextrainfo":') < 0:
                 color['blue'] = 0xff
 		color['red'] = color['green'] = 0
 	    ###busy
-            elif body.find('personastate": 2') >= 0 and body.find('gameextrainfo":') < 0:
+            elif body.find('personastate":2') >= 0 and body.find('gameextrainfo":') < 0:
 		color['red'] = color['blue'] = 0xff
 		color['green'] = 0
 	    ### away/snoooze
-            elif (body.find('personastate": 3') >= 0 or body.find('personastate": 4') >= 0) and body.find('gameextrainfo":') < 0:
+            elif (body.find('personastate":3') >= 0 or body.find('personastate": 4') >= 0) and body.find('gameextrainfo":') < 0:
 		color['red'] = color['blue'] = 0xff
 		color['green'] = 0
 	    ###possible to be 'away' and in a game..
-            elif body.find('gameextrainfo":') >= 0 and body.find('personastate": 1') >= 0:
+            elif body.find('gameextrainfo":') >= 0 and body.find('personastate":1') >= 0:
 	        color['green'] = color['blue'] = 0xff
             elif body.find('gameextrainfo":') >= 0:
                 color['green'] = 0xff
